@@ -14,5 +14,5 @@ void loop() {
   // put your main code here, to run repeatedly:
   val = hallRead();
   Serial.print("sensor = ");
-  Serial.println(val)
+  Serial.println(val);
 }
