@@ -14,7 +14,6 @@ const int pressuretransducermaxPSI = 100; //psi value of transducer being used
 const int sensorreadDelay = 250; //constant integer to set the sensor read delay in milliseconds
 float pressureValue = 0; //variable to store the value coming from the pressure transducer
 int valveState = 0; //1 for energized/open & 0 for closed
-//int or boolean for the value of opening or closing? how do we open and close
 
 void setup() {
   // put your setup code here, to run once:
@@ -29,25 +28,14 @@ void loop() {
 
   if (pressureValue >= 10){
     openValve();
-  } else if (pressureValue <= 10){
-    closeValve();
+    valveState = 0
   }
 }
 
 //lets say its a normally closed circuit; solenoid is closed when unenergized => Energize to open
 void openValve(){
-  //if closed open, if already open nthg
-  if (valveState == 0) {
     digitalWrite(A3, HIGH);
-    valveState = 1;
-  }
-  else if (valveState == 1) {
-    
-  }
 }
 void closeValve(){
   valveState = 0;
 }
-//mechanisim might have to change if u have to provide a set value of voltage to keep open or closed ig? (go look at spec sheet lazy)
-//by creating a var of state that u set to 1 or 0 or u 
-//change and an ifstatement checks it each time it runs and changes 
