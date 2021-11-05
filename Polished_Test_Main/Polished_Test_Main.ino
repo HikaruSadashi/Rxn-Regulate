@@ -35,7 +35,7 @@ void loop() {
 
   if (pressureValue >= 10){
     openValve();
-    valveState = 0
+    valveState = 1
   }
 }
 
