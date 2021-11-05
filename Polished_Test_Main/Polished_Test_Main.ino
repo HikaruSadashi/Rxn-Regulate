@@ -17,6 +17,10 @@ int valveState = 0; //1 for energized/open & 0 for closed
 
 void setup() {
   // put your setup code here, to run once:
+  
+  //we might have to do this if we want the digital or analog pins to send out or turn on or off, like for LED in the tinkercad tut but
+  //but why are we using a3 to open valve? where did I get that code from
+  pinMode(A3, OUTPUT);
 
 }
 
