@@ -35,14 +35,29 @@ void loop() {
 
   if (pressureValue >= 10){
     openValve();
-    valveState = 1
+  } else if (pressureValve < 10) {
+    closeValve();
   }
 }
 
 //lets say its a normally closed circuit; solenoid is closed when unenergized => Energize to open
 void openValve(){
+  if (valveState == 0) {
     digitalWrite(A3, HIGH);
+    valveState = 1;
+  } 
 }
 void closeValve(){
-  valveState = 0;
+  if (valveState == 1) {
+    digitalWrite(A3, LOW);
+    valveState = 0;
+  }
 }
+
+/*
+No longer does it keep sending digital write high to open valve when alreayd open
+so instead 
+Like I said abuot difference than led, will be sending the 5v not to power led but to 
+turn on the relay while its connected to its own 12v power
+Ill get details of ^
+*/
