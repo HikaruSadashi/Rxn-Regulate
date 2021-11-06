@@ -60,4 +60,5 @@ so instead
 Like I said abuot difference than led, will be sending the 5v not to power led but to 
 turn on the relay while its connected to its own 12v power
 Ill get details of ^
+Use that video of powering 12v shi with relay and arduino
 */
