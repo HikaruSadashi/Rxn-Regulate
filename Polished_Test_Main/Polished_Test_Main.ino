@@ -35,7 +35,7 @@ void loop() {
 
   if (pressureValue >= 10){
     openValve();
-  } else if (pressureValve < 10) {
+  } else if (pressureValue < 10) {
     closeValve();
   }
 }
